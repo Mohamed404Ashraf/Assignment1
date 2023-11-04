@@ -1,0 +1,102 @@
+1- Guided media refers to communication channels with physical cables that guide signals, such as coaxial cables or fiber optics. Unguided media, on the other hand, are wireless channels that don't rely on physical cables, like Wi-Fi or Bluetooth. Guided media typically offer faster and more reliable data transmission, but they are less flexible and can be expensive to install. Unguided media provide more flexibility and mobility but may have lower speeds and can be susceptible to interference. Examples of guided media include coaxial cables and fiber optics, while examples of unguided media include Wi-Fi and Bluetooth.
+
+2- Two popular wireless Internet access technologies are Wi-Fi and 5G. Wi-Fi is commonly used for local wireless networking within homes and businesses. 5G is a cellular network technology that offers high-speed wireless Internet access over a larger area. 5G generally provides faster speeds and lower latency compared to Wi-Fi, but its coverage is not as widespread as Wi-Fi.
+
+3- Mobile access networks can have lower reliability than other access networks due to factors like signal interference, network congestion, and handovers between different cell towers. Mobile devices constantly switch between towers, which can lead to dropped calls or data interruptions. Additionally, mobile networks are more susceptible to environmental factors, such as buildings and obstacles blocking signals.
+
+4- Coaxial cable has limitations for network use, including limited bandwidth and susceptibility to interference. Coaxial cable is capable of transmitting data but has lower bandwidth compared to fiber optics, which limits its data capacity. It is also vulnerable to electromagnetic interference and signal loss over long distances.
+
+5- The primary purpose of packet switching devices is to forward data packets from the source to the destination. Switches operate at the data link layer and are used in local area networks to forward data frames based on MAC addresses. Routers operate at the network layer and make routing decisions based on IP addresses, allowing them to connect different networks and determine the optimal path for packet delivery.
+
+6- Long queuing times in packet switching devices can result from factors like network congestion, high traffic volume, or inefficient routing. When the device's buffer is full, packets are queued, and if this queuing time becomes too long, it can lead to packet loss. Congestion in the network, slow processing, or inefficient traffic prioritization can all contribute to long queuing times.
+
+7- The main advantage of packet switching over circuit switching is efficiency and flexibility. In packet switching, data is divided into packets and sent separately, allowing multiple data streams to share the same network infrastructure. This makes better use of available bandwidth and is more adaptable to varying data traffic. In contrast, circuit switching dedicates a fixed path for the entire duration of a call, which is less efficient and not as adaptable to different data types and usage patterns.
+
+
+
+Q2
+
+Total time = 10,000 kilobits / 1,000 kilobits per second + 0.01 seconds = 10 seconds + 0.01 seconds = 10.01 seconds
+
+b) With ACK packets of 100 bits for each transmitted 1-kilobit packet, you need to factor in the additional bits that need to be transmitted and acknowledged.
+
+Transmission time for 1-kilobit packet = (Packet size in kilobits) / (Transmission rate in kilobits per second) = 1 kilobit / 1,000 kilobits per second = 0.001 seconds (1 millisecond)
+
+However, after each transmitted packet, an ACK packet of 100 bits is required. So, the total time for each packet exchange is 1 millisecond (transmission time) + 1 millisecond (ACK transmission time) + 10 milliseconds (propagation delay) = 12 milliseconds.
+
+Now, you have 10,000 packets to transmit, each taking 12 milliseconds.
+
+Total time = 10,000 packets × 12 milliseconds/packet = 120,000 milliseconds = 120 seconds
+
+So, with ACK packets, the total time taken to transmit the file is 120 seconds.
+
+
+
+Q3
+
+Transmission rate: 10 Mbps (10,000,000 bits per second)
+Propagation delay: 2 milliseconds (0.002 seconds)
+File size: 5 megabytes (5 * 8 = 40 megabits)
+Packet size: 1000 bytes (8000 bits)
+Packet loss rate: 5%
+a) Total time taken to transmit the file with packet loss and retransmission:
+
+Calculate the number of packets in the file:
+Number of packets = File size / Packet size = (40 megabits) / (8000 bits) = 5000 packets
+
+Calculate the time to transmit one packet (excluding retransmission):
+Transmission time for one packet = Packet size / Transmission rate = 8000 bits / 10,000,000 bits per second = 0.0008 seconds (0.8 milliseconds)
+
+Calculate the time for the signal to propagate from sender to receiver:
+Propagation time = Propagation delay * Number of packets = 0.002 seconds * 5000 packets = 10 seconds
+
+Calculate the time for retransmission (due to packet loss):
+Packet loss rate = 5% = 0.05
+Expected number of retransmissions = Packet loss rate / (1 - Packet loss rate) = 0.05 / (1 - 0.05) = 0.0526 (rounded to 4 decimal places)
+Total retransmission time = Expected number of retransmissions * Transmission time for one packet = 0.0526 * 0.0008 seconds = 0.00004208 seconds (rounded to 5 decimal places)
+
+Calculate the total time for the entire transmission, including retransmissions and propagation delay:
+Total time = (Number of packets * Transmission time for one packet) + (Propagation time) + (Total retransmission time)
+Total time = (5000 packets * 0.0008 seconds) + 10 seconds + 0.00004208 seconds = 4.00408 seconds
+
+b) Effective transmission rate:
+
+Effective transmission rate = File size (in bits) / Total time (in seconds)
+Effective transmission rate = 40,000,000 bits / 4.00408 seconds ≈ 9,981,248.01 bits per second, or approximately 9.98 Mbps
+
+So, the total time to transmit the file with packet loss and retransmission is approximately 4.004 seconds, and the effective transmission rate is approximately 9.98 Mbps.
+
+
+
+
+Q4
+a) To calculate the throughput for the file transfer, we need to consider the link with the lowest capacity (bottleneck link), as it determines the maximum data rate that can be achieved.
+
+In this case, the throughput is limited by the link with rate R1, which is 500 kbps (kilobits per second).
+
+So, the throughput for the file transfer is 500 kbps.
+
+b) If the file size is 4 million bytes, we need to convert it to bits and then divide it by the throughput to estimate the time it takes to transfer the file.
+
+File size in bits = 4,000,000 bytes * 8 bits/byte = 32,000,000 bits
+
+Transfer time = File size (in bits) / Throughput = 32,000,000 bits / 500,000 bits per second = 64 seconds
+
+So, it will take approximately 64 seconds to transfer the file to Host B.
+
+c) If the link rate R is reduced to 100 kbps (kilobits per second), we need to recalculate the throughput and transfer time.
+
+The throughput is now limited by the link with rate R, which is 100 kbps.
+
+So, the throughput for the file transfer is 100 kbps.
+
+File size in bits = 4,000,000 bytes * 8 bits/byte = 32,000,000 bits
+
+Transfer time = File size (in bits) / Throughput = 32,000,000 bits / 100,000 bits per second = 320 seconds
+
+So, with the reduced link rate, it will take approximately 320 seconds to transfer the file to Host B.
+
+
+
+
+
